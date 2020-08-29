@@ -1,0 +1,438 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{95CCC6C4-8544-4B9B-AB19-718205E05B67}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Liaqat_Gym_Management_System</RootNamespace>
+    <AssemblyName>Liaqat Gym Management System</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Aha-Soft-Free-Large-Boss-Admin.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.3.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1358.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1358.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddCertificteRecord.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AddCertificteRecord.Designer.cs">
+      <DependentUpon>AddCertificteRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddClubMember.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AddClubMember.Designer.cs">
+      <DependentUpon>AddClubMember.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddNewClub.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AddNewClub.Designer.cs">
+      <DependentUpon>AddNewClub.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddPackage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AddPackage.Designer.cs">
+      <DependentUpon>AddPackage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminDatabase.cs" />
+    <Compile Include="AdminInformation.cs" />
+    <Compile Include="Attendacne.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Attendacne.Designer.cs">
+      <DependentUpon>Attendacne.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AttendenceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttendenceForm.Designer.cs">
+      <DependentUpon>AttendenceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AttendenceReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AttendenceReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CertificationsReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CertificationsReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ClubDatabase.cs" />
+    <Compile Include="ClubInfo.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ClubInfo.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ClubMembersInformation.cs" />
+    <Compile Include="Clubs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Clubs.Designer.cs">
+      <DependentUpon>Clubs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Credentionals.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Credentionals.Designer.cs">
+      <DependentUpon>Credentionals.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditClubCertificateRecrod.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EditClubCertificateRecrod.Designer.cs">
+      <DependentUpon>EditClubCertificateRecrod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditClubMember.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EditClubMember.Designer.cs">
+      <DependentUpon>EditClubMember.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditPackage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EditPackage.Designer.cs">
+      <DependentUpon>EditPackage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FeeExpiredMembers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FeeExpiredMembers.Designer.cs">
+      <DependentUpon>FeeExpiredMembers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FeeForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FeeForm.Designer.cs">
+      <DependentUpon>FeeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GymDatabase.cs" />
+    <Compile Include="GymDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GymDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GymMembersInformation.cs" />
+    <Compile Include="GymPackages.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GymPackages.Designer.cs">
+      <DependentUpon>GymPackages.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Home.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HomePage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HomePage.Designer.cs">
+      <DependentUpon>HomePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="AddMember.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AddMember.Designer.cs">
+      <DependentUpon>AddMember.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RemaningFee.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RemaningFee.Designer.cs">
+      <DependentUpon>RemaningFee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RemaningFeeMembers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RemaningFeeMembers.Designer.cs">
+      <DependentUpon>RemaningFeeMembers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Report.Designer.cs">
+      <DependentUpon>Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReportDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Settings.Designer.cs">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShowMembers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ShowMembers.Designer.cs">
+      <DependentUpon>ShowMembers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="ThisMonthMember.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ThisMonthMember.Designer.cs">
+      <DependentUpon>ThisMonthMember.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateMember.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UpdateMember.Designer.cs">
+      <DependentUpon>UpdateMember.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddCertificteRecord.resx">
+      <DependentUpon>AddCertificteRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddClubMember.resx">
+      <DependentUpon>AddClubMember.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddNewClub.resx">
+      <DependentUpon>AddNewClub.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddPackage.resx">
+      <DependentUpon>AddPackage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Attendacne.resx">
+      <DependentUpon>Attendacne.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttendenceForm.resx">
+      <DependentUpon>AttendenceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttendenceReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>AttendenceReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CertificationsReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CertificationsReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clubs.resx">
+      <DependentUpon>Clubs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Credentionals.resx">
+      <DependentUpon>Credentionals.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditClubCertificateRecrod.resx">
+      <DependentUpon>EditClubCertificateRecrod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditClubMember.resx">
+      <DependentUpon>EditClubMember.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditPackage.resx">
+      <DependentUpon>EditPackage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FeeExpiredMembers.resx">
+      <DependentUpon>FeeExpiredMembers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FeeForm.resx">
+      <DependentUpon>FeeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GymPackages.resx">
+      <DependentUpon>GymPackages.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HomePage.resx">
+      <DependentUpon>HomePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddMember.resx">
+      <DependentUpon>AddMember.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RemaningFee.resx">
+      <DependentUpon>RemaningFee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RemaningFeeMembers.resx">
+      <DependentUpon>RemaningFeeMembers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report.resx">
+      <DependentUpon>Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings.resx">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowMembers.resx">
+      <DependentUpon>ShowMembers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThisMonthMember.resx">
+      <DependentUpon>ThisMonthMember.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateMember.resx">
+      <DependentUpon>UpdateMember.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="ClubInfo.xsc">
+      <DependentUpon>ClubInfo.xsd</DependentUpon>
+    </None>
+    <None Include="ClubInfo.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ClubInfo.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ClubInfo.xss">
+      <DependentUpon>ClubInfo.xsd</DependentUpon>
+    </None>
+    <None Include="GymDataSet.xsc">
+      <DependentUpon>GymDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="GymDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GymDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GymDataSet.xss">
+      <DependentUpon>GymDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\AddClubMember.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="ReportDataSet.xsc">
+      <DependentUpon>ReportDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ReportDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ReportDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ReportDataSet.xss">
+      <DependentUpon>ReportDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Images\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Aha-Soft-Free-Large-Boss-Admin.ico" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
